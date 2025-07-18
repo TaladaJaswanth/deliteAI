@@ -26,7 +26,7 @@ Navigate to `$GIT_ROOT/coreruntime` and run:
 ```sh
 python3 build.py
 ```
-This will compile an executable `build/nimbleclient` from `main.cpp`.
+This will compile an executable `build/nimble_client/nimble_client` from `main.cpp`.
 
 ### Build python SDK
 Pre-requisite:
@@ -45,6 +45,7 @@ Pre-requisite: Setup mockserver by following the steps at [MockServerDocs](../mo
 ### Run Coreruntime tests
 ```sh
 cd $GIT_ROOT/coreruntime
+rm -rf build
 python3 build.py --testing
 cd build
 ./nimbletest
@@ -63,6 +64,7 @@ Pre-requisite: For linux since we are using Clang for compilation, appropriate g
 ### Run for nimbletest:
 ```sh
 cd $GIT_ROOT/coreruntime
+rm -rf build
 python3 build.py --testing --coverage
 cd build
 ./nimbletest
